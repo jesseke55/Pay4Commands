@@ -1,0 +1,20 @@
+name: Pay4Commands
+version: 2.5
+main: de.CodingDev.Pay4Commands.Pay4Commands
+author: R3N3PDE
+authors: [CodingDev]
+depend: [Vault]
+commands:
+   pay4commands:
+      description: Reload Pay4Commands.
+      usage: /<command>
+permissions:
+    pay4commands.use:
+        description: Allows you to pay for commands.
+        default: true
+    pay4commands.free:
+        description: Allows you not too pay for commands..
+        default: false
+    pay4commands.reload:
+        description: Allows you to reload Pay4Commands.
+        default: false
