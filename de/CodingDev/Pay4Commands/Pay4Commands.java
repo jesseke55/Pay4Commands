@@ -26,7 +26,7 @@ import de.CodingDev.Pay4Commands.org.mcstats.Metrics;
 
 public class Pay4Commands extends JavaPlugin implements Listener{
 	public static Economy econ = null;
-	public String prefix = "§8[§9Pay4Commands§8] §6";
+	public String prefix = "Â§8[Â§9Pay4CommandsÂ§8] Â§6";
 	public boolean newVersion = false;
 	public String versionNumber = "";
 
@@ -39,7 +39,7 @@ public class Pay4Commands extends JavaPlugin implements Listener{
 			return;
 		}
 		if (!getConfig().getBoolean("showPrefix")) {
-			this.prefix = "§8[§9Pay4Commands§8] §6";
+			this.prefix = "Â§8[Â§9Pay4CommandsÂ§8] Â§6";
 		}
 		getLogger().info("Pay4Commands has been enabled!");
 		getLogger().info("-------------------------");
@@ -272,33 +272,33 @@ public class Pay4Commands extends JavaPlugin implements Listener{
 		getConfig().addDefault("usePermission", true);
 		getConfig().addDefault("showPrefix", true);
 		getConfig().addDefault("currency", "Coins");
-		getConfig().addDefault("language", "en");
+		getConfig().addDefault("language", "enUS");
 		getConfig().addDefault("showSuccessMessage", true);
 		getConfig().addDefault("showDebug", false);
 		
-		getConfig().addDefault("en.msgNoPermissions", "You do not have the permission to use this command.");
-		getConfig().addDefault("en.msgNotEnoughItems", "Not enough items you need §c%price% %currency%§6.");
-		getConfig().addDefault("en.msgNotEnoughItemsOr", "Or you need §c%price% %currency%§6.");
-		getConfig().addDefault("en.msgNotEnoughMoney", "Not enough money you need §c%price% %currency%§6.");
-		getConfig().addDefault("en.msgNotEnoughMoneyOr", "Or you need §c%price% %currency%§6.");
-		getConfig().addDefault("en.msgSuccess", "You have paid §c%price% %currency%§6 to use the command §c%command%§6.");
-		getConfig().addDefault("en.newVersion", "We have released the version §c%s§6.");
+		getConfig().addDefault("enUS.msgNoPermissions", "You do not have the permission to use this command.");
+		getConfig().addDefault("enUS.msgNotEnoughItems", "Not enough items you need Â§c%price% %currency%Â§6.");
+		getConfig().addDefault("enUS.msgNotEnoughItemsOr", "Or you need Â§c%price% %currency%Â§6.");
+		getConfig().addDefault("enUS.msgNotEnoughMoney", "Not enough money you need Â§c%price% %currency%Â§6.");
+		getConfig().addDefault("enUS.msgNotEnoughMoneyOr", "Or you need Â§c%price% %currency%Â§6.");
+		getConfig().addDefault("enUS.msgSuccess", "You have paid Â§c%price% %currency%Â§6 to use the command Â§c%command%Â§6.");
+		getConfig().addDefault("enUS.newVersion", "We have released the version Â§c%sÂ§6.");
 
-		getConfig().addDefault("de.msgNoPermissions", "Du hast nicht die Berechtigung, um diesen Befehl zu verwenden.");
-		getConfig().addDefault("de.msgNotEnoughItems", "Nicht genug Items, Du brauchst §c%price% %currency%§6.");
-		getConfig().addDefault("de.msgNotEnoughItemsOr", "Oder Du brauchst §c%price% %currency%§6.");
-		getConfig().addDefault("de.msgNotEnoughMoney", "Nicht genug Geld, Du brauchst §c%price% %currency%§6.");
-		getConfig().addDefault("de.msgNotEnoughMoneyOr", "Oder Du brauchst §c%price% %currency%§6.");
-		getConfig().addDefault("de.msgSuccess", "Du zahlst §c%price% %currency%§6, damit du den Befehl %command%§6 nutzen kannst.");
-		getConfig().addDefault("de.newVersion", "Wir haben die Version §c%s§6 veröffentlicht!");
+		getConfig().addDefault("deDE.msgNoPermissions", "Du hast nicht die Berechtigung, um diesen Befehl zu verwenden.");
+		getConfig().addDefault("deDE.msgNotEnoughItems", "Nicht genug Items, Du brauchst Â§c%price% %currency%Â§6.");
+		getConfig().addDefault("deDE.msgNotEnoughItemsOr", "Oder Du brauchst Â§c%price% %currency%Â§6.");
+		getConfig().addDefault("deDE.msgNotEnoughMoney", "Nicht genug Geld, Du brauchst Â§c%price% %currency%Â§6.");
+		getConfig().addDefault("deDE.msgNotEnoughMoneyOr", "Oder Du brauchst Â§c%price% %currency%Â§6.");
+		getConfig().addDefault("deDE.msgSuccess", "Du zahlst Â§c%price% %currency%Â§6, damit du den Befehl %command%Â§6 nutzen kannst.");
+		getConfig().addDefault("deDE.newVersion", "Wir haben die Version Â§c%sÂ§6 verÃ¶ffentlicht!");
 
-		getConfig().addDefault("fr.msgNoPermissions", "Vous n'avez pas la permission d'utiliser cette commande.");
-		getConfig().addDefault("fr.msgNotEnoughItems", "Pas assez d'items vous avez besoin de §c%price% %currency%§6.");
-		getConfig().addDefault("en.msgNotEnoughItemsOr", "Or you need §c%price% %currency%§6.");
-		getConfig().addDefault("fr.msgNotEnoughMoney", "Pas assez d'argent vous avez besoin de §c%price% %currency%§6.");
-		getConfig().addDefault("en.msgNotEnoughMoneyOr", "Or you need §c%price% %currency%§6.");
-		getConfig().addDefault("fr.msgSuccess", "Vous payez §c%price% %currency%§6 pour utiliser la commande §c%command%§6.");
-		getConfig().addDefault("fr.newVersion", "We have has released the version §c%s§6.");
+		getConfig().addDefault("frFR.msgNoPermissions", "Vous n'avez pas la permission d'utiliser cette commande.");
+		getConfig().addDefault("frFR.msgNotEnoughItems", "Pas assez d'items vous avez besoin de Â§c%price% %currency%Â§6.");
+		getConfig().addDefault("frFR.msgNotEnoughItemsOr", "Or you need Â§c%price% %currency%Â§6.");
+		getConfig().addDefault("frFR.msgNotEnoughMoney", "Pas assez d'argent vous avez besoin de Â§c%price% %currency%Â§6.");
+		getConfig().addDefault("frFR.msgNotEnoughMoneyOr", "Or you need Â§c%price% %currency%Â§6.");
+		getConfig().addDefault("frFR.msgSuccess", "Vous payez Â§c%price% %currency%Â§6 pour utiliser la commande Â§c%command%Â§6.");
+		getConfig().addDefault("frFR.newVersion", "We have has released the version Â§c%sÂ§6.");
 
 		getConfig().options().copyDefaults(true);
 		saveConfig();
