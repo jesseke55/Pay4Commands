@@ -23,7 +23,7 @@ import de.CodingDev.Pay4Commands.UpdateChecker.Updater;
 import de.CodingDev.Pay4Commands.UpdateChecker.Updater.UpdateResult;
 import de.CodingDev.Pay4Commands.UpdateChecker.Updater.UpdateType;
 import de.CodingDev.Pay4Commands.org.mcstats.Metrics;
-
+ 
 public class Pay4Commands extends JavaPlugin implements Listener{
 	public static Economy econ = null;
 	public String prefix = "§8[§9Pay4Commands§8] §6";
