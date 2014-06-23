@@ -95,9 +95,9 @@ public class Pay4Commands extends JavaPlugin implements Listener{
 		if (cmd.getName().equalsIgnoreCase("pay4commands")){
 			if (sender.hasPermission("pay4commands.reload")){
 				reloadConfig();
-				sender.sendMessage(this.prefix + "Settings reloaded.");
+				sender.sendMessage(this.prefix + getConfig().getString(new StringBuilder(String.valueOf(getConfig().getString("language"))).append(".msgReloadConfig").toString()));
 			}else{
-				sender.sendMessage(this.prefix + getConfig().getString("msgNoPermissions"));
+				sender.sendMessage(this.prefix + getConfig().getString(new StringBuilder(String.valueOf(getConfig().getString("language"))).append(".msgNoPermissions").toString()));
 			}
 			return true;
 		}
@@ -283,6 +283,7 @@ public class Pay4Commands extends JavaPlugin implements Listener{
 		getConfig().addDefault("enUS.msgNotEnoughMoneyOr", "Or you need §c%price% %currency%§6.");
 		getConfig().addDefault("enUS.msgSuccess", "You have paid §c%price% %currency%§6 to use the command §c%command%§6.");
 		getConfig().addDefault("enUS.newVersion", "We have released the version §c%s§6.");
+		getConfig().addDefault("enUS.msgReloadConfig", "Configs reloaded.");
 
 		getConfig().addDefault("deDE.msgNoPermissions", "Du hast nicht die Berechtigung, um diesen Befehl zu verwenden.");
 		getConfig().addDefault("deDE.msgNotEnoughItems", "Nicht genug Items, Du brauchst §c%price% %currency%§6.");
@@ -291,6 +292,7 @@ public class Pay4Commands extends JavaPlugin implements Listener{
 		getConfig().addDefault("deDE.msgNotEnoughMoneyOr", "Oder Du brauchst §c%price% %currency%§6.");
 		getConfig().addDefault("deDE.msgSuccess", "Du zahlst §c%price% %currency%§6, damit du den Befehl %command%§6 nutzen kannst.");
 		getConfig().addDefault("deDE.newVersion", "Wir haben die Version §c%s§6 veröffentlicht!");
+		getConfig().addDefault("deDE.msgReloadConfig", "Configuration wurde neu geladen.");
 
 		getConfig().addDefault("frFR.msgNoPermissions", "Vous n'avez pas la permission d'utiliser cette commande.");
 		getConfig().addDefault("frFR.msgNotEnoughItems", "Pas assez d'items vous avez besoin de §c%price% %currency%§6.");
