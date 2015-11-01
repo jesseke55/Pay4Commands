@@ -1,4 +1,4 @@
-package de.CodingDev.Pay4Commands;
+package xyz.jesseke55.Pay4Commands;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -18,11 +18,6 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import de.CodingDev.Pay4Commands.UpdateChecker.Updater;
-import de.CodingDev.Pay4Commands.UpdateChecker.Updater.UpdateResult;
-import de.CodingDev.Pay4Commands.UpdateChecker.Updater.UpdateType;
-import de.CodingDev.Pay4Commands.org.mcstats.Metrics;
  
 public class Pay4Commands extends JavaPlugin implements Listener{
 	public static Economy econ = null;
@@ -41,30 +36,16 @@ public class Pay4Commands extends JavaPlugin implements Listener{
 		if (!getConfig().getBoolean("showPrefix")) {
 			this.prefix = "§8[§9Pay4Commands§8] §6";
 		}
-		getLogger().info("Pay4Commands has been enabled!");
-		getLogger().info("-------------------------");
-		getLogger().info("By: R3N3PDE");
-		getLogger().info("Website: http://codingdev.de/");
-		getLogger().info("Website: http://r3n3p.de/");
-		getLogger().info("Updates: http://dev.bukkit.org/server-mods/pay4commands/");
-		getLogger().info("Version: " + getDescription().getVersion());
-		getLogger().info("-------------------------");
-		getLogger().info("Checking for Updates...");
-		Updater updater = new Updater(this, 45061, this.getFile(), UpdateType.NO_DOWNLOAD, true);
-		if (updater.getResult() == UpdateResult.UPDATE_AVAILABLE) {
-		    getLogger().info("New version available! " + updater.getLatestName());
-		    newVersion = true;
-		    versionNumber = updater.getLatestName();
-		}else if (updater.getResult() == UpdateResult.NO_UPDATE) {
-		    getLogger().info("No new version available");
-		}else{
-		    getLogger().info("Updater: " + updater.getResult());
-		}
-		try
-		{
-			Metrics metrics = new Metrics(this);
-			metrics.start();
-		}catch (IOException localIOException) {}
+    getLogger().info("-------------------------");
+    getLogger().info("");
+    getLogger().info("Name: " + getDescription().getName() );
+    getLogger().info("Version: " + getDescription().getVersion() );
+    getLogger().info("Authors: " + getDescription().getAuthors() );
+    getLogger().info("Website: " + getDescription().getWebsite() );
+    getLogger().info("");
+    getLogger().info(ChatColor.GREEN + "Please leave a rate if you like the plugin!");
+    getLogger().info("");
+    getLogger().info("-------------------------");
 	}
 	
 	@EventHandler
@@ -261,12 +242,6 @@ public class Pay4Commands extends JavaPlugin implements Listener{
 		commands.add("/time set *:50");
 		commands.add("/time set*:50");
 		commands.add("/time:3");
-		getConfig().options().header(
-				  "############################################\n"
-				+ "                 Hello Admin               #\n"
-				+ "############################################\n"
-				+ "Need Help with the Commands? http://dev.bukkit.org/bukkit-plugins/pay4commands/pages/how-to-using-pay4commands/ \n"
-				+ "");
 		
 		getConfig().addDefault("commands", commands);
 		getConfig().addDefault("usePermission", true);
